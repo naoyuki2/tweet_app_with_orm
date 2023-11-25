@@ -44,3 +44,12 @@ model Like {
   @@map("likes")
 }
 
+model Retweet {
+  user    User    @relation(fields: [userId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  userId  Int     @map("user_id") 
+  post    Post    @relation(fields: [postId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  postId  Int     @map("post_id") 
+  createdAt DateTime @map("created_at") @default(now())
+  @@id([userId, postId])
+  @@map("Retweet")
+}
