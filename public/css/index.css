@@ -363,7 +363,11 @@ img[data-test=post-image] {
   cursor: pointer;
 }
 
-.has-retweeted {
+.retweet {
+  color: #8899a6;
+}
+
+.unretweet {
   color: #19CF86;
 }
 
