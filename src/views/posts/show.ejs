@@ -40,6 +40,7 @@
       <% } %>
       <span data-test="like-count"><%= likeCount %></span>
 
+      <% if(!hasRetweeted){ %>
       <form action="">
         <button
           type="submit"
@@ -49,17 +50,17 @@
           <span class="material-icons">swap_horiz</span>
         </button>
       </form>
-
+      <% } else { %>
       <form action="">
         <button
           type="submit"
           data-test="submit-retweet"
-          class="retweet-btn"
+          class="retweet-btn unretweet"
         >
           <span class="material-icons">swap_horiz</span>
         </button>
       </form>
-
+      <% } %>
       <span data-test="retweet-count">5</span>
 
       <% if(post.user.id === currentUser.id) { %>

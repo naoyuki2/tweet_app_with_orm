@@ -364,6 +364,10 @@ img[data-test=post-image] {
 }
 
 .retweet {
+  color: #8899a6;
+}
+
+.unretweet {
   color: #19CF86;
 }
 
