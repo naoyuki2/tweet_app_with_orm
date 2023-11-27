@@ -53,7 +53,7 @@
         </button>
       </form>
       <% } else { %>
-      <form action="/posts/<%= post.id %>/retweet=DELETE"
+      <form action="/posts/<%= post.id %>/retweets?_method=DELETE"
         method="POST"
         data-test="form-retweet">
         <button
