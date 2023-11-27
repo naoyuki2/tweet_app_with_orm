@@ -41,7 +41,9 @@
       <span data-test="like-count"><%= likeCount %></span>
 
       <% if(!hasRetweeted){ %>
-      <form action="">
+      <form action="/posts/<%= post.id %>/retweets"
+        method="POST"
+        data-test="form-retweet">
         <button
           type="submit"
           data-test="submit-retweet"
@@ -51,7 +53,9 @@
         </button>
       </form>
       <% } else { %>
-      <form action="">
+      <form action="/posts/<%= post.id %>/retweet=DELETE"
+        method="POST"
+        data-test="form-retweet">
         <button
           type="submit"
           data-test="submit-retweet"
@@ -61,7 +65,7 @@
         </button>
       </form>
       <% } %>
-      <span data-test="retweet-count">5</span>
+      <span data-test="retweet-count"><%= retweetCount %></span>
 
       <% if(post.user.id === currentUser.id) { %>
       <div class="post-menus">
